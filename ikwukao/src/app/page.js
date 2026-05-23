@@ -1,65 +1,198 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function IkwukaoDev() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden border-b border-white/10">
+        <div className="absolute inset-0 bg-linear-to-br from-zinc-900 via-black to-zinc-950 opacity-90"></div>
+
+        <div className="relative max-w-6xl mx-auto px-6 py-28 lg:py-36">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="uppercase tracking-[0.3em] text-sm text-zinc-400 mb-4">
+                Ikwuka Okoye
+              </p>
+
+              <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+                Backend Engineer
+                <span className="block text-zinc-400">& AI Builder</span>
+              </h1>
+
+              <p className="text-lg text-zinc-300 leading-relaxed max-w-xl mb-10">
+                I design scalable backend systems, build intelligent AI-powered
+                applications, and create modern digital experiences using Python,
+                Go, APIs, automation, and cloud technologies.
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="#projects"
+                  className="px-6 py-3 rounded-2xl bg-white text-black font-semibold hover:scale-105 transition"
+                >
+                  View Projects
+                </a>
+
+                <a
+                  href="#contact"
+                  className="px-6 py-3 rounded-2xl border border-white/20 hover:bg-white/10 transition"
+                >
+                  Contact Me
+                </a>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="rounded-3xl border border-white/10 bg-zinc-900 p-8 shadow-2xl">
+                <div className="space-y-5">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                    <span className="text-zinc-400">Primary Stack</span>
+                    <span className="font-semibold">Python • Go • Linux • SQL • Docker</span>
+                  </div>
+
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                    <span className="text-zinc-400">Specialization</span>
+                    <span className="font-semibold">Backend Engineering</span>
+                  </div>
+
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                    <span className="text-zinc-400">Focus</span>
+                    <span className="font-semibold">AI Systems & APIs</span>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-zinc-400">Availability</span>
+                    <span className="text-green-400 font-semibold">
+                      Open to Remote Work
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="max-w-6xl mx-auto px-6 py-24">
+        <div className="grid md:grid-cols-2 gap-14 items-start">
+          <div>
+            <h2 className="text-4xl font-bold mb-6">About Me</h2>
+            <p className="text-zinc-300 leading-relaxed text-lg mb-5">
+              I am a Backend Engineer passionate about building reliable,
+              scalable, and secure systems. My work focuses on APIs,
+              automation, distributed systems, cloud infrastructure, and
+              AI-driven applications.
+            </p>
+
+            <p className="text-zinc-400 leading-relaxed">
+              I enjoy solving difficult engineering problems, learning emerging
+              technologies, and creating impactful software products that help
+              businesses and individuals operate more efficiently.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              'Python',
+              'Go',
+              'FastAPI',
+              'Docker',
+              'Linux',
+              'PostgreSQL',
+              'REST APIs',
+              'AI Engineering',
+            ].map((skill) => (
+              <div
+                key={skill}
+                className="rounded-2xl border border-white/10 bg-zinc-900 p-5 text-center hover:border-white/30 transition"
+              >
+                <p className="font-medium">{skill}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="bg-zinc-950 border-y border-white/10">
+        <div className="max-w-6xl mx-auto px-6 py-24">
+          <div className="mb-14">
+            <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
+            <p className="text-zinc-400 max-w-2xl">
+              A selection of projects focused on backend systems, APIs,
+              automation, and AI-powered applications.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: 'AI Automation Platform',
+                desc: 'Built an automation platform integrating AI agents, APIs, and workflow orchestration.',
+              },
+              {
+                title: 'Scalable REST API',
+                desc: 'Designed a production-ready backend service with authentication, caching, and database optimization.',
+              },
+              {
+                title: 'Cloud Infrastructure Toolkit',
+                desc: 'Created deployment and monitoring tools for scalable Linux-based cloud environments.',
+              },
+            ].map((project) => (
+              <div
+                key={project.title}
+                className="rounded-3xl border border-white/10 bg-black p-7 hover:border-white/30 hover:-translate-y-1 transition"
+              >
+                <h3 className="text-2xl font-semibold mb-4">
+                  {project.title}
+                </h3>
+
+                <p className="text-zinc-400 leading-relaxed">
+                  {project.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="max-w-4xl mx-auto px-6 py-24 text-center">
+        <h2 className="text-4xl font-bold mb-6">Let’s Work Together</h2>
+
+        <p className="text-zinc-400 text-lg leading-relaxed mb-10">
+          Interested in Backend Engineering, AI Systems, Automation, or remote
+          collaboration opportunities? Reach out and let’s build something
+          impactful!
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-4">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:ikwukao@proton.me"
+            className="px-6 py-3 rounded-2xl bg-white text-black font-semibold hover:scale-105 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            ikwukao@proton.me
           </a>
+
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://github.com/ikwukao"
+            className="px-6 py-3 rounded-2xl border border-white/20 hover:bg-white/10 transition"
           >
-            Documentation
+            GitHub
+          </a>
+
+          <a
+            href="https://x.com/ikwukao_"
+            className="px-6 py-3 rounded-2xl border border-white/20 hover:bg-white/10 transition"
+          >
+            X/Twitter
           </a>
         </div>
-      </main>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10 py-8 text-center text-zinc-500 text-sm">
+        Ikwukao.dev © 2026 — Feel Free to Share My Information
+      </footer>
     </div>
   );
 }
