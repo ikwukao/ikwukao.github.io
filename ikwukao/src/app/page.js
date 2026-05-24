@@ -1,3 +1,11 @@
+export const metadata = {
+  openGraph: {
+    title: "ikwukao",
+    description: "Backend Engineer & AI Builder",
+    images: ["./public/og-image.png"],
+  },
+};
+
 export default function IkwukaoDev() {
   return (
     <div className="min-h-screen bg-black text-white font-sans">
