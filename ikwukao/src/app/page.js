@@ -38,7 +38,7 @@ export default function IkwukaoDev() {
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-black to-zinc-950 opacity-95"></div>
+        <div className="absolute inset-0 bg-linear-to-brrom-zinc-900 via-black to-zinc-950 opacity-95"></div>
 
         <div className="absolute inset-0 opacity-[0.03] bg-[url('/grid.svg')]"></div>
 
